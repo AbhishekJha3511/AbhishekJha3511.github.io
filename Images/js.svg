@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
+  <!-- Square -->
+  <rect x="50" y="50" width="100" height="100" fill="#f7df1e" />
+
+  <!-- Letter "J" -->
+  <text x="75" y="140" font-family="Arial, sans-serif" font-size="60" fill="#000000">J</text>
+
+  <!-- Letter "S" -->
+  <text x="105" y="140" font-family="Arial, sans-serif" font-size="60" fill="#000000">S</text>
+</svg>
