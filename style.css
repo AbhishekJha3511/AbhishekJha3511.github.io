@@ -121,19 +121,19 @@ nav ul li a:hover {
 
 }
 
-.secondSection {
+#about {
     /* background-color: red; */
     height: 80px;
     margin: 0 12%;
 
 }
 
-.secondSection :nth-child(1) {
+#about :nth-child(1) {
     font-size: 1.6rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.skills h1 {
+#skills h1 {
     text-align: center;
     font-size: 2.5rem;
     margin: 10px;
@@ -158,6 +158,46 @@ nav ul li a:hover {
     background-color: whitesmoke;
     border-radius: 20%;
     margin: 20px;
+}
+
+
+#projects h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 10px;
+    padding: 10px;
+}
+.project-main {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.project-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    background-color: rgb(65, 65, 65);
+    border-radius: 20%;
+    margin: 20px;
+}
+.project-title {
+    font-size: 1rem;
+    font-weight: 500;
+    /* margin: 20px; */
+    position: relative;
+    top: -35px;
+}
+.project-desc {
+    font-size: 0.5rem;
+    color: gray;
+    margin: -60px;
+    position: relative;
+    bottom: -78px;
 }
 
 .work-exprence {
@@ -213,6 +253,7 @@ footer {
     /* background-color: #122031; */
     background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
     /* height: 200px; */
+    margin-top: 100px;
 }
 
 .footer {

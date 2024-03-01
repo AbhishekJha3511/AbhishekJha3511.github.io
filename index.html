@@ -19,13 +19,14 @@
             <div class="left">Abhishek Jha</div>
             <div class="right">
                 <ul id="nav-list">
-                    <li><a href="">Home</a></li>
-                    <li><a href="/About.html">About</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact Me</a></li>
-                    <button>Resume</button>
-                    <button>GitHub</button>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contactme">Contact Me</a></li>
+                    <button id="downloadCV">Resume</button>
+                    <button onclick="gotoGhub();">GitHub</button>
+                    
                 </ul>
             </div>
         </nav>
@@ -41,15 +42,16 @@
             <div class="rightSection">
                 <img src="Images/Code typing-amico.png" alt="">
             </div>
-
         </section>
-        <section class="secondSection">
+
+        <section id="about">
             <div class="content">
                 Versatile full stack web developer proficient in a range of technologies, specializing in building
                 scalable and user-friendly web applications.
             </div>
         </section>
-        <section class="skills">
+
+        <section id="skills">
             <h1>Skillset</h1>
             <div class="skill-main">
                 <div class="skill-card">
@@ -71,9 +73,41 @@
             </div>
         </section>
 
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class="project-main">
+                
+                <div class="project-card">
+                
+                    <img src="Images/Project1.png" alt="">
+                    <div class="project-title">Project 1</div>
+                    <div class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vitae enim
+                        deleniti voluptatem nobis consequuntur adipisci quibusdam dolore ratione impedit.</div>
+                </div>
+                <div class="project-card">
+                    <img src="Images/Project1.png" alt="">
+                    <div class="project-title">Project 1</div>
+                    <div class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vitae enim
+                        deleniti voluptatem nobis consequuntur adipisci quibusdam dolore ratione impedit.</div>
+                </div>
+                <div class="project-card">
+                    <img src="Images/Project1.png" alt="">
+                    <div class="project-title">Project 1</div>
+                    <div class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vitae enim
+                        deleniti voluptatem nobis consequuntur adipisci quibusdam dolore ratione impedit.</div>
+                </div>
+                <div class="project-card">
+                    <img src="Images/Project1.png" alt="">
+                    <div class="project-title">Project 1</div>
+                    <div class="project-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vitae enim
+                        deleniti voluptatem nobis consequuntur adipisci quibusdam dolore ratione impedit.</div>
+                </div>
+            </div>
+        </section>
+
+        <!--
         <section class="work-exprence">
             <h1>Work Experience</h1>
-            <!-- <span>My Past Experience Here</span> -->
 
             <div class="horizental-line">
                 <div class="vertical-line">
@@ -114,6 +148,8 @@
                 </div>
             </div>
         </section>
+        -->
+
     </main>
     <footer>
         <div class="footer">
