@@ -1,50 +1,57 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//   // Number of cards to repeat
-//   const numberOfCards = 5;
-
-//   // Container to hold the cards
-//   const container = document.getElementsByClassName('skills-sec');
-
-//   // Loop to creat and append the cards
-//   for (let i = 0; i < numberOfCards; i++) {
-//     // Create a card element
-//     const card = document.createElement('div')
-//     card.className = 'skill-card'
-//     // card.textContent = `Card ${i +1}`    
-
-//     container.appendChild(card)
-//   }
-  
-// })
-
-function gotoGhub(){
-    window.location='https://abhishekjha3511.github.io/';
-}
-document.addEventListener('DOMContentLoaded', function () {
-    // Get the button element by its ID
-    const downloadCV = document.getElementById('downloadCV');
-
-    // Add a click event listener to the button
-    downloadCV.addEventListener('click', function () {
-        // Replace 'your_pdf_file.pdf' with the actual path to your PDF file
-        const pdfFilePath = 'Images/MyTResume.pdf';
-
-        // Create an anchor element
-        const link = document.createElement('a');
-
-        // Set the href attribute to the PDF file path
-        link.href = pdfFilePath;
-
-        // Set the download attribute with the desired file name
-        link.download = 'Abhishek_JhaCV.pdf';
-
-        // Append the anchor to the document body
-        document.body.appendChild(link);
-
-        // Trigger a click event on the anchor element
-        link.click();
-
-        // Remove the anchor element from the document body
-        document.body.removeChild(link);
-    });
+let typed = new Typed("#textTy", {
+    strings: ["Web Developer", "Freelancer", "Designer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
 });
+
+const hamburger = document.querySelector(".hamburger");
+const navbar = document.querySelector(".navbar");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navbar.classList.toggle("active");
+}
+navbar.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navbar.classList.remove("active");
+}
+
+// Contact us form
+function validateContact() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let message = document.getElementById("message").value; 
+    let error_msg = document.getElementById("error_msg");
+    error_msg.style.padding = "10px";
+
+    let errors = [];
+
+    if (name.lenght < 5) {
+        errors.push("Please enter a valid name");
+    }
+    if (email.indexOf("@") == -1 || email.lenght < 6) {
+        errors.push("Please enter a valid email");
+    }
+    if (phone.lenght < 8) {
+        errors.push("Please enter a valid phone number");
+    }
+    if (message.lenght < 40) {
+        errors.push("Please enter more than 40 characters");
+    }
+
+    if (errors.length > 0) {
+        error_msg.innerHTML = errors.join("<br>");
+        return false;
+    }
+    else{
+        alert("Form submitted successfully");
+    }
+
+}
