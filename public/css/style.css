@@ -53,7 +53,7 @@ h2 span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 10;
 }
 .logo {
   position: relative;
@@ -112,7 +112,7 @@ h2 span {
 .home {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   justify-content: center;
   /* background-color: transparent; */
   display: flex;
@@ -314,20 +314,22 @@ h2 span {
   line-height: 1.4;
 }
 /* end */
-#contact{
+#contact {
   height: 80vh;
+}
+
+.descr {
 }
 
 .contact-div {
   /* display: grid; */
+  /* grid-template-columns: repeat(2, 1fr); */
   display: flex;
-  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
   justify-items: center;
   gap: 1rem;
-  padding: 80px;
-  
+  padding: 40px;
 }
 
 .contact-text {
@@ -338,13 +340,12 @@ h2 span {
   /* align-items: center; */
   /* justify-content: center; */
   /* border: 2px solid red; */
-  
 }
 
 .contact-card {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -357,16 +358,15 @@ h2 span {
   border: 1px solid rgba(255, 255, 255, 0.089);
   cursor: pointer;
 }
-.contact-card p{
+.contact-card p {
   /* padding: 0 80px; */
   width: 80%;
   font-size: 18px;
   line-height: 25px;
   /* border: 2px solid red; */
-  
 }
 
-.contact-list{
+.contact-list {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -374,12 +374,12 @@ h2 span {
   gap: 1rem;
   padding: 0 80px;
 }
-.contact-list li{
+.contact-list li {
   list-style: none;
   display: flex;
   justify-content: start;
   align-items: start;
-  
+
   gap: 1rem;
 }
 
@@ -393,7 +393,7 @@ h2 span {
   border-radius: 50%;
   left: 300px;
   top: 150px;
-  transition: all 1s ;
+  transition: all 1s;
 }
 
 .contact-text:hover::before {
@@ -402,7 +402,7 @@ h2 span {
 
 .contact-container {
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -412,14 +412,19 @@ h2 span {
   background: linear-gradient(to right, #005c97, #363795);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+#contact > div > div.contact-text > div > h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #e8e8e8;
+  text-align: center;
+}
 
 .contact-container form .descr {
   font-size: 20px;
   font-weight: 500;
   color: #e8e8e8;
-  margin-bottom: 25px;
-  margin-top: 25px;
   text-align: center;
+  margin-top: 10px;
 }
 
 .form {
@@ -514,9 +519,7 @@ textarea {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-
-.social-card{
+.social-card {
   /* width: 100%; */
   /* height: 10%; */
   background-color: transparent;
@@ -524,7 +527,7 @@ textarea {
   align-items: center;
   /* justify-content: space-evenly; */
   gap: 20px;
-  box-shadow:  0px 0px 20px rgba(0, 0, 0, 0.055);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
 }
 
 /* for all social containers*/
@@ -536,34 +539,33 @@ textarea {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   border-radius: 50%;
-
 }
 /* instagram*/
 .containerOne:hover {
   background-color: #d62976;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 /* twitter*/
 .containerTwo:hover {
   background-color: #00acee;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 /* linkdin*/
 .containerThree:hover {
   background-color: #0072b1;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 /* Whatsapp*/
 .containerFour:hover {
-  background-color: #128C7E;
-  transition-duration: .3s;
+  background-color: #128c7e;
+  transition-duration: 0.3s;
 }
 
 .socialContainer:active {
   transform: scale(0.9);
-  transition-duration: .3s;
+  transition-duration: 0.3s;
 }
 
 .socialSvg {
@@ -590,138 +592,195 @@ textarea {
   }
 }
 
-.hamburger{
+/* .hamburger {
   display: none;
 }
-.bar{
+.bar {
   display: block;
   width: 25px;
   height: 3px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   background: #ffffff;
+} */
+
+/*
+.hide-humbar{
+color: white;
+} */
+
+/* Media queries for tablet */
+@media (max-width: 768px) {
+  .home {
+    width: 100%;
+    padding: 20px;
+  }
+  .hideOnTab {
+    display: none;
+  }
+
+  nav {
+    /* display: none; */
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about-sec {
+    width: 100%;
+  }
+  .projects {
+    width: 100%;
+  }
+  .prop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact {
+    width: 100%;
+  }
+  .descr {
+  }
+  footer {
+    width: 100%;
+  }
 }
 
-/* Media queries for responsiveness */
-@media screen and (max-width: 600px) {
- 
-  .navbar{
-    position: fixed;
-    left: -100%;
-    top: 5rem;
-    flex-direction: column;
-    width: 80%;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-  .navbar.active{
-    left: 0;
-  }
-  .hamburger.active .bar:nth-child(2){
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(1){
-    transform: translateY(8px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(2){
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  .hamburger{
-    display: block;
-    position: fixed;
-    right: 25px;
-    top: 20px;
-    cursor: pointer;
-    z-index: 1000;
-  }
-
-
-  .home{
-    border: 2px solid red;
-    
-    width: 80%;
-  }
-  /* Adjustments for smaller screens */
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 20px 10px;
-    width: 55%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-  .logo {
-    font-size: 18px;
-    opacity: 0;
+/* Media queries for Mobile */
+@media screen and (max-width: 400px) {
+  .hideOnMobile {
+    display: none;
   }
   .navbar {
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
   }
   .navbar a {
-    margin: 10px 0;
+    padding: 0px 120px;
+    animation: slideTop 0.1s ease forwards;
+    animation-delay: calc(0.07s* var(--i));
   }
-  h2 {
-    padding: 50px 20px;
-    font-size: 24px;
+  h2{
+    padding: 40px;
   }
-}
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-items: flex-start;
+    color: var(--background-color);
+  }
+  .sidebar a {
+    width: 100%;
+  }
+  .header {
+    /* display: none; */
+    width: 100%;
+    padding: 0px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-/* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
-  /* Adjustments for smaller screens */
-  .home-content h3 {
-    font-size: 24px;
   }
-  .home-content h1 {
-    font-size: 40px;
+  .home {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
   }
-  .home-content p {
-    font-size: 16px;
+  .home-content h1{
+    font-size: 51px;
   }
-  .btn-abtmore {
-    padding: 10px 20px;
-    font-size: 14px;
+  .home-content h3{
+    font-size: 27px;
   }
-  .profile-img img {
-    width: 200px;
-    height: 200px;
+  .profile-img {
+    display: none;
+  }
+
+  .about-card .about-card-back {
+    /* height: 90vh; */
+    margin-bottom: 50px;
+  }
+  .skills {
+    display: flex;
+    flex-direction: column;
+  }
+  .skill-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .skill-box {
+    /* width: 100%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+  .skill-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .skill-box img {
+    display: flex;
+    flex-direction: column;
+  }
+  .skill-grid div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 20px;
+  }
+  .g-pro p{
+    display: none;
+  }
+  .projects{
+    height: 100vh;
+  }
+  .project-container {
   }
   .card {
-    width: 250px;
+    width: 150px;
     height: 150px;
   }
-  .card__content {
+  .contact {
+    width: 100%;
+  }
+  .contact-div{
+    display: flex;
+    flex-direction: column-reverse;
     padding: 10px;
   }
-  .card__title {
-    font-size: 18px;
+  .contact-container{
+    height: 74vh;
   }
-  .card__description {
-    font-size: 12px;
+  .descr{
+    /* display: none; */
+    visibility: hidden;
+    padding-bottom:10px ;
+  } 
+  .contact-text{
+    display: none;
   }
-  .contact-div {
-    flex-direction: column;
-    padding: 20px;
+  footer {
+    width: 100%;
   }
-  .contact-card {
-    height: auto;
-    padding: 10px;
+  .menus ul{
+    display: none;
   }
-  .contact-list {
-    padding: 0 20px;
+  .footer-info {
+  gap: 0px;
+  margin: 0px;
+  padding: 0px;
   }
-  .contact-list li {
-    flex-direction: column;
+  .copyright{
+    width: 100%;
   }
-  .about-sec {
-    height: auto;
-    padding: 20px;
-  }
-  /* Add more adjustments as needed */
 }

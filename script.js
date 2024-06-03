@@ -6,6 +6,15 @@ let typed = new Typed("#textTy", {
     loop: true
 });
 
+function showSidebar() {
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+}
+function hideSidebar() {
+    const hideSidebar = document.querySelector('.hideSidebar')
+    hideSidebar.style.display = 'none'
+}
+
 const hamburger = document.querySelector(".hamburger");
 const navbar = document.querySelector(".navbar");
 
